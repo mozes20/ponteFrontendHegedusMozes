@@ -19,10 +19,9 @@ import {NgIf} from "@angular/common";
 export class AddEmailModalComponent {
   @ViewChild('content') content?: TemplateRef<any>;
   @ViewChild('close-button') closeButton?: TemplateRef<any>;
-  @Output() onSave = new EventEmitter<any>();
+  @Output() onEmailAdded = new EventEmitter<void>();
 
   createdContactId?: number;
-  emails: any[] = [];
 
   form = new FormGroup({
     email: new FormControl('',[Validators.required, Validators.email]),
@@ -41,18 +40,18 @@ export class AddEmailModalComponent {
 
   addEmail() {
     if (this.form.valid) {
-      console.log("belementünk a formban", this.form.value.email);
+      console.log('addEmail method called');
       this.genericService.post('contact/email',
         {contactId: this.createdContactId,
               email: this.form.value.email})
-        .subscribe((response:any) => {
-
+        .subscribe((response) => {
+          this.onEmailAdded.emit();
+          this.form.reset();
+          this.closeButton?.elementRef.nativeElement.click();
       })
 
-      alert('Email added');
-      this.form.reset();
+
     } else {
-      alert('Invalid email');
       console.log('Invalid email');
     }
 

@@ -1,25 +1,26 @@
 <ng-template #content let-modal>
   <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">Create new contact </h4>
+    <h4 class="modal-title" id="modal-basic-title">Add Email to the contact </h4>
     <button type="button" id="close-button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
   </div>
   <div class="modal-body">
     <form [formGroup]="form">
       <div class="mb-3">
+        <label for="email">Email</label>
         <div class="row">
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" class="form-control" formControlName="email" required>
-            <div *ngIf="form.controls.email.invalid && form.controls.email.touched" class="alert alert-danger">
-              <div *ngIf="form.controls.email.errors?.required">
+          <div class="col-9">
+            <div class="form-group">
+
+              <input type="email" id="email" class="form-control" formControlName="email" required>
+              <div *ngIf="form.controls['email'].invalid && form.controls['email'].touched" class="alert alert-danger">
                 Email is required.
-              </div>
-              <div *ngIf="form.controls.email.errors?.email">
                 Email must be a valid email address.
               </div>
             </div>
           </div>
-          <button type="button" class="btn btn-outline-dark col-1" (click)="addEmail()">+</button>
+          <div class="col-2">
+            <button type="button" class="btn btn-outline-dark" (click)="addEmail()">+</button>
+          </div>
         </div>
       </div>
     </form>

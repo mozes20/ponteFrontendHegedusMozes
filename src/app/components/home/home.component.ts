@@ -41,7 +41,12 @@ export class HomeComponent implements OnInit,AfterViewInit,OnDestroy {
 
   ngAfterViewInit() {
     if (this.createModal) {
-      this.createModal.onSave.subscribe((createdContact) => {
+      this.createModal.onSave.subscribe(() => {
+        this.getContacts();
+      });
+    }
+    if (this.addEmailModal) {
+      this.addEmailModal.onEmailAdded.subscribe(() => {
         this.getContacts();
       });
     }
@@ -49,6 +54,7 @@ export class HomeComponent implements OnInit,AfterViewInit,OnDestroy {
 
   ngOnDestroy() {
     this.createModal?.onSave.unsubscribe();
+    this.addEmailModal?.onEmailAdded.unsubscribe();
   }
 
 
