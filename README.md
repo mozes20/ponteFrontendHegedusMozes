@@ -1,27 +1,64 @@
-# PonteFrontend
+# Angular Contact Management Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.10.
+This is a simple contact management application built with Angular.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- List contacts
+- Add new contact
+- Add email to a contact
+- Delete a contact
 
-## Code scaffolding
+## Setup and Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Clone the repository:
 
-## Build
+```bash
+git clone https://github.com/yourusername/yourrepository.git
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2. Navigate to the project directory:
 
-## Running unit tests
+```bash
+cd yourrepository
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+3. Install the dependencies:
 
-## Running end-to-end tests
+```bash
+npm install
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+4. Start the development server:
 
-## Further help
+```bash
+ng serve
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+The application will be available at `http://localhost:4200`.
+
+## Usage
+
+### List Contacts
+
+The home page lists all the contacts. You can navigate through the pages using the "Next" and "Previous" buttons.
+
+### Add New Contact
+
+Click on the "Add Contact" button to open a modal where you can enter the new contact's details.
+
+### Add Email to a Contact
+
+Click on the "Add Email" button next to a contact to open a modal where you can enter the new email.
+
+### Delete a Contact
+
+Click on the "Delete" button next to a contact to delete the contact.
+
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
