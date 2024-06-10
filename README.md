@@ -39,6 +39,15 @@ The application will be available at `http://localhost:4200`.
 
 ## Usage
 
+### Login into the Application
+
+The application has a simple login page. Enter the username and password to login.
+
+demo username: ponte
+
+
+demo password: ponte
+
 ### List Contacts
 
 The home page lists all the contacts. You can navigate through the pages using the "Next" and "Previous" buttons.
@@ -55,10 +64,3 @@ Click on the "Add Email" button next to a contact to open a modal where you can 
 
 Click on the "Delete" button next to a contact to delete the contact.
 
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
