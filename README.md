@@ -14,7 +14,7 @@ This is a simple contact management application built with Angular.
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/yourrepository.git
+git clone https://github.com/mozes20/ponteFrontendHegedusMozes
 ```
 
 2. Navigate to the project directory:
